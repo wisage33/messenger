@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 ?>
 
 <!doctype html>
@@ -12,10 +12,15 @@
     <title>Registration</title>
 </head>
 <body>
-<form action="../model/reg.php" method="post">
-    <input type="text" name="login" placeholder="Login">
-    <input type="password" name="password" placeholder="Password">
-    <button type="submit" name="reg_user">Registration</button>
-</form>
+    <form action="../model/reg.php" method="post">
+        <input type="text" name="login" placeholder="Login">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit" name="reg_user">Registration</button>
+    </form>
+    <div class="message">
+        <?php if (isset($_SESSION['message'])): ?>
+        <?= $_SESSION['message']; ?>
+        <? endif ?>
+    </div>
 </body>
 </html>

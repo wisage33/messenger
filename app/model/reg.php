@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once ("C:/OSPanel/domains/practic/config/connection.php");
 
 if (isset($_POST['reg_user'])) {
@@ -12,6 +13,7 @@ if (isset($_POST['reg_user'])) {
         ":password" => $hashedPassword
     ]);
     $conn = null;
+    $_SESSION['message'] = 'Registration successful';
     header("Location: ../view/register.php");
     exit();
 }
