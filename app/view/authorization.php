@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 ?>
 
 <!doctype html>
@@ -12,11 +12,15 @@
     <title>Authorization</title>
 </head>
 <body>
+<<<<<<< HEAD
 <<<<<<< main
 <form action="authorization.php" method="post">
 =======
 <form action="../model/auth.php" method="post">
 >>>>>>> local
+=======
+<form action="auth.php" method="post">
+>>>>>>> b457f62df3b69c22e4c6dcbecc02aa71c099fecb
     <input type="text" name="login" placeholder="Login">
     <input type="password" name="password" placeholder="Password">
     <button type="submit" name="auth_user">Enter</button>
