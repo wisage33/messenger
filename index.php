@@ -1,5 +1,16 @@
 <?php
 session_start();
+if (!isset($_SESSION['user']))
+{
+    header('Location: app/view/authorization.php');
+    unset($_SESSION['user']);
+    exit();
+}
+if (isset($_POST['exit_user']))
+{
+    unset($_SESSION['user']);
+    header('Location: app/view/authorization.php');
+}
 ?>
 
 <!doctype html>
@@ -13,5 +24,6 @@ session_start();
 </head>
 <body>
     <h1>Hello, <?= $_SESSION['user']['login']?></h1>
+    <button type="submit" name="exit_user">Exit</button>
 </body>
 </html>
