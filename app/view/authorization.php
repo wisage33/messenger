@@ -12,9 +12,10 @@ session_start();
     <title>Authorization</title>
 </head>
 <body>
-<form action="auth.php" method="post">
-    <input type="text" name="login" placeholder="Login">
-    <input type="password" name="password" placeholder="Password">
-</form>
+    <form action="../model/auth.php" method="post">
+            <input type="text" name="login" placeholder="Login">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit" name="auth_user">Enter</button>
+        </form>
 </body>
 </html>
