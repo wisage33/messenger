@@ -15,7 +15,7 @@
 <form action="../model/reg.php" method="post">
     <input type="text" name="login" placeholder="Login">
     <input type="password" name="password" placeholder="Password">
-    <button type="submit">Registration</button>
+    <button type="submit" name="reg_user">Registration</button>
 </form>
 </body>
 </html>
